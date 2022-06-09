@@ -25,12 +25,10 @@ The various Conditions implemented are --
 4. There are different sellers for each title of book, So we have to select the lowest cost of the title.
 5. The invoice for books bought has to be generated for books brought like the below format
 
-<SELLER NAME>
+""SELLER NAME""
 NAME OF THE BOOK | QUANTITY | AMOUNT
-     ENTRY       |   ENTRY  | ENTRY
-     .
-     ..
-     ...
-TOTAL -- Amount
-6. If a there is a request for 4 books and there are 2 sellers with availability of 1 and 2 books respectively then it should be bought from both the stores to fulfill the request. (Example) and remaining one should be updated in unfullfiled.csv
-7. After money is exhausted with the library all the books should be listed in the above file too in the requested format.
+ENTRY | ENTRY | ENTRY
+.
+..
+...
+TOTAL -- Amount 6. If a there is a request for 4 books and there are 2 sellers with availability of 1 and 2 books respectively then it should be bought from both the stores to fulfill the request. (Example) and remaining one should be updated in unfullfiled.csv 7. After money is exhausted with the library all the books should be listed in the above file too in the requested format.
