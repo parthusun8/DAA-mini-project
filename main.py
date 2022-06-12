@@ -1,8 +1,24 @@
+from zoneinfo import available_timezones
 import pandas
+import read_files
+
+## There can n sellers and not necessary that each seller will have all books
 
 
 def main():
-    print("Main function")
+
+    ## GET LIBRARY REQUIREMENTS FOR BOOKS
+    requirements = read_files.requirement()
+    for book in requirements:
+        print(f"Needed {requirements[book]} pieces for {book}")
+
+    ## GET ALL BOOKS AND PRICE OFFERED BY VARIOUS SELLERS
+    available_books, no_of_sellers = read_files.sellers(requirements)
+    print("\n BOOKWISE SELLERS ARE (in sorted order is ) -- ")
+    for book in available_books:
+        print(book)
+        for seller in available_books[book]:
+            print("\t", seller)
 
 
 if __name__ == "__main__":
