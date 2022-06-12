@@ -1,4 +1,8 @@
 import read_files
+from invoice.invoice import invoice, create_invoice
+
+#  from project.folder.subfolder.filename import functionname
+
 
 ## There can n sellers and not necessary that each seller will have all books
 
@@ -18,6 +22,12 @@ def main():
         print(book)
         for seller in available_books[book]:
             print("\t", seller)
+
+    ## Generating seller wise data (To be changed when algorithm for selecting books is done)
+    sellers = invoice(available_books)
+
+    # Creating invoice for each seller
+    create_invoice(sellers)
 
 
 if __name__ == "__main__":
