@@ -7,8 +7,9 @@ def main():
 
     ## GET LIBRARY REQUIREMENTS FOR BOOKS
     requirements = read_files.requirement()
+    print("\nLibrary requirements are -- ")
     for book in requirements:
-        print(f"Needed {requirements[book]} pieces for {book}")
+        print(f"\tNeeded {requirements[book]} pieces for {book}")
 
     ## GET ALL BOOKS AND PRICE OFFERED BY VARIOUS SELLERS
     available_books, no_of_sellers = read_files.sellers(requirements)
