@@ -1,5 +1,3 @@
-from zoneinfo import available_timezones
-import pandas
 import read_files
 
 ## There can n sellers and not necessary that each seller will have all books
