@@ -1,3 +1,4 @@
+from statistics import quantiles
 import pandas as pd
 import os
 
@@ -35,6 +36,17 @@ def sellers(requirements):
         available_books[book] = sorted(available_books[book], key=lambda x: x[2])
 
     return available_books, no_of_sellers
+
+
+def update_unfulfilled_csv(d):
+    title = []
+    quantities = []
+    for book in d:
+        title.append(book)
+        quantities.append(d[book])
+    data = {"Title": title, "Quantity": quantities}
+    df = pd.DataFrame(data)
+    df.to_csv("./Helper/unfulfilled.csv", index=False)
 
 
 if __name__ == "__main__":
